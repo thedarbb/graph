@@ -8,7 +8,17 @@
 #include <iostream>
 using namespace std;
 
-int main(int argc, char **argv)
+int main()
 {
+	Graph* graph = new Graph();
+
+	Vertex* a = new Vertex("A");
+	Vertex* b = new Vertex("B");
+	Vertex* c = new Vertex("C");
+
+	graph->traverse(a);
+	graph->traverse(b);
+	graph->traverse(c)
+
 	return 0;
 }
