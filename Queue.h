@@ -21,7 +21,6 @@ private:
 	Vertex* _first;
 	Vertex* _last;
 	int _size;
-
 };
 
 #endif /* QUEUE_H_ */

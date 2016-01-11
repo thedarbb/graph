@@ -6,6 +6,7 @@
  */
 
 #include <iostream>
+#include "Graph.h"
 using namespace std;
 
 int main()
@@ -15,10 +16,20 @@ int main()
 	Vertex* a = new Vertex("A");
 	Vertex* b = new Vertex("B");
 	Vertex* c = new Vertex("C");
+	Vertex* d = new Vertex("D");
+
+	a->addAdjacent(b);
+	a->addAdjacent(c);
+	b->addAdjacent(c);
+	c->addAdjacent(d);
 
 	graph->traverse(a);
-	graph->traverse(b);
-	graph->traverse(c)
+	cout << "The distance from D to A equals " << d-> getDistance() << endl;
 
+	Vertex* i = d;
+	while(i != NULL){
+		cout << i -> getName() << endl;
+		i = i -> getRoute();
+	}
 	return 0;
 }
